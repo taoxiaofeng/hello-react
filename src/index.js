@@ -8,6 +8,7 @@ import Game from './components/Game/Game';
 import Count from './components/Count/Count';
 import './index.css';
 import UseRefDemo from './components/UseRef/useRef';
+import App from './components/App/App'
 
 // ========================================
 
@@ -15,8 +16,9 @@ import UseRefDemo from './components/UseRef/useRef';
 
 console.log(<Game />)
 ReactDOM.render(
-    // <Game />,
+    <Game />,
     // <MyComponent />,
-    <UseRefDemo />,
+    // <UseRefDemo />,
+    // <App />,
     document.getElementById('root')
-);
+); 

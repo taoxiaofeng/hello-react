@@ -6,13 +6,15 @@ import '../../index.css';
 class Game extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            history: [{
-                squares: Array(9).fill(null)
-            }],
-            stepNumber: 0, // 代表我们当前正在查看哪一项历史记录。
-            xIsNext: true,
-        }
+    }
+
+    state = {
+        history: [{
+            squares: Array(9).fill(null)
+        }],
+        stepNumber: 0, // 代表我们当前正在查看哪一项历史记录。
+        xIsNext: true,
+        items: ['item']
     }
 
     handleClick(i) {
@@ -39,11 +41,18 @@ class Game extends React.Component {
         });
     }
 
+    componentDidMount() {
+        this.state.items.push("New item");
+        // this.setState({ items: this.state.items });
+        // this.setState({ items: [`a`] });
+        // this.setState({ items: this.state.items.concat([`b`]) });
+    }
+
     render() {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
-
+        console.log(`this.state.items:`, this.state.items)
         const moves = history.map((step, move) => {
             const desc = move ? 'Go to move #' + move : 'Go to game start';
             return (
