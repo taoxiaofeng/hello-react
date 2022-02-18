@@ -9,6 +9,7 @@ import Count from './components/Count/Count';
 import './index.css';
 import UseRefDemo from './components/UseRef/useRef';
 import App from './components/App/App'
+import UseWindowSizeDemo from './components/FC/UseWindowSizeDemo'
 
 // ========================================
 
@@ -16,9 +17,10 @@ import App from './components/App/App'
 
 console.log(<Game />)
 ReactDOM.render(
-    <Game />,
+    // <Game />,
     // <MyComponent />,
     // <UseRefDemo />,
     // <App />,
+    <UseWindowSizeDemo />,
     document.getElementById('root')
 ); 
