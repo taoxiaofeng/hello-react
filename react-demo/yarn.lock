@@ -2,6 +2,25 @@
 # yarn lockfile v1
 
 
+"@apollo/client@^3.3.16":
+  version "3.3.16"
+  resolved "https://registry.nlark.com/@apollo/client/download/@apollo/client-3.3.16.tgz#e4a51b0f86583b18ab81723660e381ef616536c1"
+  integrity sha1-5KUbD4ZYOxirgXI2YOOB72FlNsE=
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.0.0"
+    "@types/zen-observable" "^0.8.0"
+    "@wry/context" "^0.6.0"
+    "@wry/equality" "^0.4.0"
+    fast-json-stable-stringify "^2.0.0"
+    graphql-tag "^2.12.0"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.15.0"
+    prop-types "^15.7.2"
+    symbol-observable "^2.0.0"
+    ts-invariant "^0.7.0"
+    tslib "^1.10.0"
+    zen-observable "^0.8.14"
+
 "@babel/code-frame@7.5.5", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
@@ -676,6 +695,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.9.2":
+  version "7.16.7"
+  resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
+  integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.1.0", "@babel/template@^7.4.0", "@babel/template@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz#f4b88d1225689a08f5bc3a17483545be9e4ed237"
@@ -720,6 +746,11 @@
 "@csstools/normalize.css@^9.0.1":
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
+
+"@graphql-typed-document-node/core@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/@graphql-typed-document-node/core/download/@graphql-typed-document-node/core-3.1.0.tgz#0eee6373e11418bfe0b5638f654df7a4ca6a3950"
+  integrity sha1-Du5jc+EUGL/gtWOPZU33pMpqOVA=
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -1054,6 +1085,11 @@
   version "12.0.12"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.12.tgz#45dd1d0638e8c8f153e87d296907659296873916"
 
+"@types/zen-observable@^0.8.0":
+  version "0.8.2"
+  resolved "https://registry.npm.taobao.org/@types/zen-observable/download/@types/zen-observable-0.8.2.tgz#808c9fa7e4517274ed555fa158f2de4b4f468e71"
+  integrity sha1-gIyfp+RRcnTtVV+hWPLeS09GjnE=
+
 "@typescript-eslint/eslint-plugin@1.13.0":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-1.13.0.tgz#22fed9b16ddfeb402fd7bcde56307820f6ebc49f"
@@ -1215,6 +1251,27 @@
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
+
+"@wry/context@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.nlark.com/@wry/context/download/@wry/context-0.6.0.tgz#f903eceb89d238ef7e8168ed30f4511f92d83e06"
+  integrity sha1-+QPs64nSOO9+gWjtMPRRH5LYPgY=
+  dependencies:
+    tslib "^2.1.0"
+
+"@wry/equality@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.nlark.com/@wry/equality/download/@wry/equality-0.4.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40wry%2Fequality%2Fdownload%2F%40wry%2Fequality-0.4.0.tgz#474491869a8d0590f4a33fd2a4850a77a0f63408"
+  integrity sha1-R0SRhpqNBZD0oz/SpIUKd6D2NAg=
+  dependencies:
+    tslib "^2.1.0"
+
+"@wry/trie@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/@wry/trie/download/@wry/trie-0.3.0.tgz#3245e74988c4e3033299e479a1bf004430752463"
+  integrity sha1-MkXnSYjE4wMymeR5ob8ARDB1JGM=
+  dependencies:
+    tslib "^2.1.0"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -3707,6 +3764,18 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.1.tgz#1c1f0c364882c868f5bff6512146328336a11b1d"
 
+graphql-tag@^2.12.0:
+  version "2.12.4"
+  resolved "https://registry.nlark.com/graphql-tag/download/graphql-tag-2.12.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fgraphql-tag%2Fdownload%2Fgraphql-tag-2.12.4.tgz#d34066688a4f09e72d6f4663c74211e9b4b7c4bf"
+  integrity sha1-00BmaIpPCectb0Zjx0IR6bS3xL8=
+  dependencies:
+    tslib "^2.1.0"
+
+graphql@^15.5.0:
+  version "15.5.0"
+  resolved "https://registry.npm.taobao.org/graphql/download/graphql-15.5.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgraphql%2Fdownload%2Fgraphql-15.5.0.tgz#39d19494dbe69d1ea719915b578bf920344a69d5"
+  integrity sha1-OdGUlNvmnR6nGZFbV4v5IDRKadU=
+
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
@@ -3827,6 +3896,13 @@ hmac-drbg@^1.0.0:
     hash.js "^1.0.3"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
+
+hoist-non-react-statics@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.nlark.com/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz?cache=0&sync_timestamp=1618847090932&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fhoist-non-react-statics%2Fdownload%2Fhoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
+  dependencies:
+    react-is "^16.7.0"
 
 hosted-git-info@^2.1.4:
   version "2.8.4"
@@ -5712,6 +5788,14 @@ opn@^5.1.0:
   dependencies:
     is-wsl "^1.1.0"
 
+optimism@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.npm.taobao.org/optimism/download/optimism-0.15.0.tgz#c65e694bec7ce439f41e9cb8fc261a72d798125b"
+  integrity sha1-xl5pS+x85Dn0Hpy4/CYacteYEls=
+  dependencies:
+    "@wry/context" "^0.6.0"
+    "@wry/trie" "^0.3.0"
+
 optimist@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
@@ -6672,7 +6756,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -6846,18 +6930,23 @@ react-dev-utils@^9.0.3:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@16.9.0:
-  version "16.9.0"
-  resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
+react-dom@17.0.2:
+  version "17.0.2"
+  resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1620317904339&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.15.0"
+    scheduler "^0.20.2"
 
 react-error-overlay@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-6.0.1.tgz#b8d3cf9bb991c02883225c48044cb3ee20413e0f"
+
+react-is@^16.7.0:
+  version "16.13.1"
+  resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1620318785197&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
 react-is@^16.8.1, react-is@^16.8.4:
   version "16.9.0"
@@ -6923,13 +7012,13 @@ react-scripts@3.1.1:
   optionalDependencies:
     fsevents "2.0.7"
 
-react@16.9.0:
-  version "16.9.0"
-  resolved "https://registry.npm.taobao.org/react/download/react-16.9.0.tgz?cache=0&sync_timestamp=1565317868688&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
+react@17.0.2:
+  version "17.0.2"
+  resolved "https://registry.nlark.com/react/download/react-17.0.2.tgz?cache=0&sync_timestamp=1620318912749&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact%2Fdownload%2Freact-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
@@ -7001,6 +7090,13 @@ recursive-readdir@2.2.2:
   dependencies:
     minimatch "3.0.4"
 
+redux@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.npmmirror.com/redux/download/redux-4.1.2.tgz#140f35426d99bb4729af760afcf79eaaac407104"
+  integrity sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
@@ -7018,6 +7114,11 @@ regenerator-runtime@0.13.3, regenerator-runtime@^0.13.2:
 regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.npmmirror.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 regenerator-transform@^0.14.0:
   version "0.14.1"
@@ -7313,9 +7414,10 @@ saxes@^3.1.9:
   dependencies:
     xmlchars "^2.1.1"
 
-scheduler@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.15.0.tgz?cache=0&sync_timestamp=1565317903688&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fscheduler%2Fdownload%2Fscheduler-0.15.0.tgz#6bfcf80ff850b280fed4aeecc6513bc0b4f17f8e"
+scheduler@^0.20.2:
+  version "0.20.2"
+  resolved "https://registry.nlark.com/scheduler/download/scheduler-0.20.2.tgz?cache=0&sync_timestamp=1620317903435&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fscheduler%2Fdownload%2Fscheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -7854,6 +7956,11 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+symbol-observable@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.npm.taobao.org/symbol-observable/download/symbol-observable-2.0.3.tgz?cache=0&sync_timestamp=1618451954701&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsymbol-observable%2Fdownload%2Fsymbol-observable-2.0.3.tgz#5b521d3d07a43c351055fa43b8355b62d33fd16a"
+  integrity sha1-W1IdPQekPDUQVfpDuDVbYtM/0Wo=
+
 symbol-tree@^3.2.2:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
@@ -8015,13 +8122,30 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
+ts-invariant@^0.7.0:
+  version "0.7.3"
+  resolved "https://registry.nlark.com/ts-invariant/download/ts-invariant-0.7.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fts-invariant%2Fdownload%2Fts-invariant-0.7.3.tgz#13aae22a4a165393aaf5cecdee45ef4128d358b8"
+  integrity sha1-E6riKkoWU5Oq9c7N7kXvQSjTWLg=
+  dependencies:
+    tslib "^2.1.0"
+
 ts-pnp@1.1.2, ts-pnp@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.1.2.tgz#be8e4bfce5d00f0f58e0666a82260c34a57af552"
 
+tslib@^1.10.0:
+  version "1.14.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1618847097275&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
+
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+
+tslib@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.2.0.tgz?cache=0&sync_timestamp=1618847097275&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+  integrity sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=
 
 tsutils@^3.7.0:
   version "3.17.1"
@@ -8695,3 +8819,8 @@ yargs@^12.0.2:
     which-module "^2.0.0"
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^11.1.1"
+
+zen-observable@^0.8.14:
+  version "0.8.15"
+  resolved "https://registry.npm.taobao.org/zen-observable/download/zen-observable-0.8.15.tgz#96415c512d8e3ffd920afd3889604e30b9eaac15"
+  integrity sha1-lkFcUS2OP/2SCv04iWBOMLnqrBU=
