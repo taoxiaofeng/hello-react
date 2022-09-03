@@ -8,9 +8,10 @@ import Game from './components/Game/Game';
 import Count from './components/Count/Count';
 import './index.css';
 import UseRefDemo from './components/UseRef/useRef';
-import App from './components/App/App'
-import UseWindowSizeDemo from './components/FC/UseWindowSizeDemo'
-
+import App from './components/App/App';
+import UseWindowSizeDemo from './components/FC/UseWindowSizeDemo';
+import MyEditor from './components/DraftDemo2/MyEditor';
+import BraftEditor from './components/BraftEditor/BraftEditor';
 // ========================================
 
 // import  MyComponent  from './components/FC/MyComponent';
@@ -21,6 +22,8 @@ ReactDOM.render(
     // <MyComponent />,
     // <UseRefDemo />,
     // <App />,
-    <UseWindowSizeDemo />,
+    // <UseWindowSizeDemo />,
+    // <MyEditor />,
+    <BraftEditor />,
     document.getElementById('root')
 ); 
