@@ -43,6 +43,7 @@
 			}
 
 			getSnapshotBeforeUpdate(){
+				console.log(`this.refs.list.scrollHeight -- `, this.refs.list.scrollHeight)
 				return this.refs.list.scrollHeight
 			}
 
