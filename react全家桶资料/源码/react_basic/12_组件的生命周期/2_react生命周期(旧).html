@@ -74,11 +74,11 @@
 			//组件将要卸载的钩子
 			componentWillUnmount(){
 				console.log('Count---componentWillUnmount');
-			}
+			}   
 
 			//控制组件更新的“阀门”
 			shouldComponentUpdate(){
-				console.log('Count---shouldComponentUpdate');
+				console.log('Count---shouldComponentUpdate');   
 				return true
 			}
 
@@ -157,7 +157,7 @@
 		}
 		
 		//渲染组件
-		ReactDOM.render(<Count/>,document.getElementById('test'))
+		ReactDOM.render(<A/>,document.getElementById('test'))
 	</script>
 </body>
 </html>

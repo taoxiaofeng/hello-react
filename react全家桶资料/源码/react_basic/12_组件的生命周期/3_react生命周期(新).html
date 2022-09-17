@@ -70,7 +70,8 @@
 			//在更新之前获取快照
 			getSnapshotBeforeUpdate(){
 				console.log('getSnapshotBeforeUpdate');
-				return 'atguigu'
+				// 利用快照生命周期 可以获取 页面更新之前的一些内容保存使用
+				return '快照值'; 	// ==> 作为 componentDidUpdate 生命周期函数的第三个参数
 			}
 
 			//组件挂载完毕的钩子
