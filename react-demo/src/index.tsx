@@ -12,6 +12,7 @@ import App from './components/App/App';
 import UseWindowSizeDemo from './components/FC/UseWindowSizeDemo';
 import MyEditor from './components/DraftDemo2/MyEditor';
 import BraftEditor from './components/BraftEditor/BraftEditor';
+import ReactDrag from './components/ReactDrag';
 // ========================================
 
 // import  MyComponent  from './components/FC/MyComponent';
@@ -24,6 +25,7 @@ ReactDOM.render(
     // <App />,
     // <UseWindowSizeDemo />,
     // <MyEditor />,
-    <BraftEditor />,
+    // <BraftEditor />,
+    <ReactDrag />,
     document.getElementById('root')
 ); 
