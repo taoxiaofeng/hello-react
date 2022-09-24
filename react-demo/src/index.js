@@ -17,15 +17,15 @@ import ReactDrag from './components/ReactDrag';
 
 // import  MyComponent  from './components/FC/MyComponent';
 
-console.log(<Game />)
+// console.log(<Game />)
 ReactDOM.render(
     // <Game />,
     // <MyComponent />,
     // <UseRefDemo />,
-    // <App />,
+    <App />,
     // <UseWindowSizeDemo />,
     // <MyEditor />,
     // <BraftEditor />,
-    <ReactDrag />,
+    // <ReactDrag />,
     document.getElementById('root')
 ); 

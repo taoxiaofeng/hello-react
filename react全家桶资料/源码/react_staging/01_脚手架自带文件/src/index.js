@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode>  // 检查 App 及 App子组件中的代码是否合理
     <App />
   </React.StrictMode>,
   document.getElementById('root')

@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 
 function ReactDrag() {
 
-    const eventLogger = (e: MouseEvent, data: Object) => {
+    const eventLogger = (e, data) => {
         console.log('Event: ', e);
         console.log('Data: ', data);
     };

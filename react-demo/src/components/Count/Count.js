@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const propTypes = {};
 
@@ -40,6 +39,3 @@ class Count extends React.Component {
 }
 
 export default Count;
-
-Count.propTypes = propTypes;
-Count.defaultProps = defaultProps;
