@@ -38,6 +38,8 @@ export const Header = (props) => {
   )
 }
 
+export default Header;
+
 // 对接收的props进行：类型、必要性限制
 Header.prototype = {
   addTodo: PropTypes.func.isRequired
