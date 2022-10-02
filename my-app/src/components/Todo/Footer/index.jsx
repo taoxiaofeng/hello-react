@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Button, Checkbox } from 'antd';
-import styles from './index';
+import styles from './index.module.less';
 
 export default function Footer(props) {
   const { checkAllTodo, clearAllDone, todos = [] } = props;

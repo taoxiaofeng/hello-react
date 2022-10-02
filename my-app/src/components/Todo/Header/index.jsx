@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import styles from './index.module.less';
+import { Input } from 'antd';
 
 export const Header = (props) => {
-
+  const [value, setValue] = useState('');
   const { addTodo } = props;
+ 
 
   // 键盘事件回调
   const handleKeyUp = (event) => {
     // 解构赋值获取keyCode, target
-    const { keyCode, target }  = event;
+    const { keyCode, target } = event;
     // 判断是否是回车按键
-    if(keyCode !== 13) {
+    if (keyCode !== 13) {
       return;
     }
-    if(target.value.trim() === ''){
+    if (target.value.trim() === '') {
       alert('输入不能为空')
       return;
     }
@@ -25,15 +27,15 @@ export const Header = (props) => {
     // 将todoObj传给App
     addTodo(todoObj);
     // 清空输入
-    target.value = '';
+    setValue('');
   }
   return (
     <div className={styles.todoHeader}>
-      <input 
-      onKeyUp={handleKeyUp}
-      type="text"
-      placeholder="请输入你的任务名称，按回车键确认"
-       />
+      <Input
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        onKeyUp={handleKeyUp}
+        placeholder="请输入你的任务名称，按回车键确认" />
     </div>
   )
 }
