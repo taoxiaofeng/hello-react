@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import Todo from './components/Todo';
+// import Todo from './components/Todo';
+import GitHubUser from './components/GitHubUser';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Todo />
+      {/* <Todo /> */}
+      <GitHubUser />
     </div>
   );
 }
