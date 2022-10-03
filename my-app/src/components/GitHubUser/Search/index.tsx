@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import styles from "./index.module.less";
 import { Button, Input } from "antd";
 import { Info } from '../type';
@@ -19,16 +19,16 @@ function Search(props: Props) {
       isLoading: true,
     });
     //发送网络请求
-    // axios.get(`/api1/search/users?q=${value}`).then(
-    //   (response) => {
-    //     //请求成功后通知App更新状态
-    //     updateAppState({ isLoading: false, users: response.data.items });
-    //   },
-    //   (error) => {
-    //     //请求失败后通知App更新状态
-    //     updateAppState({ isLoading: false, err: error.message });
-    //   }
-    // );
+    axios.get(`/api1/search/users?q=${value}`).then(
+      (response) => {
+        //请求成功后通知App更新状态
+        updateAppState({ isLoading: false, users: response.data.items });
+      },
+      (error) => {
+        //请求失败后通知App更新状态
+        updateAppState({ isLoading: false, err: error.message });
+      }
+    );
   };
 
   return (
