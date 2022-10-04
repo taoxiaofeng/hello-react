@@ -2,31 +2,28 @@ import React, { useState } from "react";
 import axios from "axios";
 import styles from "./index.module.less";
 import { Button, Input } from "antd";
-import { Info } from '../type';
+import PubSub from "pubsub-js";
 
-interface Props {
-  updateAppState: (args: Info) => void;
-}
+interface Props {}
 
 function Search(props: Props) {
-  const { updateAppState } = props;
   const [value, setValue] = useState("");
 
   const search = () => {
-    //发送请求前通知App更新状态
-    updateAppState({
-      isFirst: true,
-      isLoading: true,
-    });
+    //发送请求前通知List更新状态
+    PubSub.publish("updateInfo", { isFirst: false, isLoading: true });
     //发送网络请求
     axios.get(`/api1/search/users?q=${value}`).then(
       (response) => {
-        //请求成功后通知App更新状态
-        updateAppState({ isLoading: false, users: response.data.items });
+        //请求成功后通知List更新状态
+        PubSub.publish("atguigu", {
+          isLoading: false,
+          users: response.data.items,
+        });
       },
       (error) => {
         //请求失败后通知App更新状态
-        updateAppState({ isLoading: false, err: error.message });
+        PubSub.publish("atguigu", { isLoading: false, err: error.message });
       }
     );
   };
