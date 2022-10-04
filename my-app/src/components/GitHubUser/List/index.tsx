@@ -16,7 +16,7 @@ function List(props: Info) {
   const { users = [], isFirst = false, isLoading = false, err } = info;
 
   useEffect(() => {
-    const subscribe = PubSub.subscribe("atguigu", (_, stateObj) => {
+    const subscribe = PubSub.subscribe("updateInfo", (_, stateObj) => {
       setInfo(stateObj);
     });
     return () => {

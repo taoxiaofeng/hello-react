@@ -16,14 +16,14 @@ function Search(props: Props) {
     axios.get(`/api1/search/users?q=${value}`).then(
       (response) => {
         //请求成功后通知List更新状态
-        PubSub.publish("atguigu", {
+        PubSub.publish("updateInfo", {
           isLoading: false,
           users: response.data.items,
         });
       },
       (error) => {
         //请求失败后通知App更新状态
-        PubSub.publish("atguigu", { isLoading: false, err: error.message });
+        PubSub.publish("updateInfo", { isLoading: false, err: error.message });
       }
     );
   };
