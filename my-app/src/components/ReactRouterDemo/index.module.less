@@ -1,0 +1,21 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  &>section {
+    display: flex;
+    &>.left {
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &>.right {
+      width: calc(100% - 180px);
+      padding: 16px;
+    }
+  }
+}

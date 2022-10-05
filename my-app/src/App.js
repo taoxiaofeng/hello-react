@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 // import Todo from './components/Todo';
-import GitHubUser from './components/GitHubUser';
+// import GitHubUser from './components/GitHubUser';
+import ReactRouterDemo from './components/ReactRouterDemo';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         </a>
       </header> */}
       {/* <Todo /> */}
-      <GitHubUser />
+      {/* <GitHubUser /> */}
+      <ReactRouterDemo />
     </div>
   );
 }
