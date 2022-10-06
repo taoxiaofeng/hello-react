@@ -1,6 +1,8 @@
 import React from 'react'
 
-interface Props {}
+interface Props {
+
+}
 
 function About(props: Props) {
  console.log(`props -- `, props)
