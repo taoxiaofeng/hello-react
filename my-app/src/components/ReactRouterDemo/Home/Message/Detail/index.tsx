@@ -1,9 +1,19 @@
 import React from 'react';
 import styles from './index.module.less';
+import { parse } from 'qs';
 
 const Detail = (props) => {
-  console.log(`detail -- `, props)
-  const { match: { params: { id, title } } } = props;
+  // console.log(`detail -- `, props)
+
+  // 接收params参数
+  // const { match: { params: { id, title } } } = props;
+
+  // 接收search参数
+  const { search } = props.location;
+  // console.log(`search -- `, search)
+
+  const { id, title } = parse(search.slice(1));
+
   const data = [{
     id: '01',
     content: '你好，中国！'
@@ -24,12 +34,23 @@ const Detail = (props) => {
     content: '你好，世界！'
   }];
   return (
-    <ul className={styles.wrap}>
-      <li>ID：{id}</li>
-      <li>TITLE：{title}</li>
-      <li>CONTENT：{data.find(f => f.id === id)?.content}</li>
-    </ul>
+    <div className={styles.wrap}>
+      <ul>
+        <li>
+          {/*  This JSX tag's 'children' prop expects a single child of type 'ReactNode', but multiple children were provided. */}
+          {/* https://bobbyhadz.com/blog/react-this-tags-children-prop-expects-single-child */}
+          <>
+            ID：{id}
+          </>
+        </li>
+        <li>
+          <>Title：{title}</>
+        </li>
+        <li>
+          <>Content：{data.find(f => f.id === id)?.content}</>
+        </li>
+      </ul>
+    </div>
   )
 }
-
 export default Detail;
