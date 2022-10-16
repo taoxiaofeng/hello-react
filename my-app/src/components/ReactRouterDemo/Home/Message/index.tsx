@@ -32,7 +32,9 @@ const Message = () => {
           {/* 向路由组件传递params参数  */}
           {/* <Link to={`/home/message/detail/${item.id}/${item.title}`}>{item.title}</Link> */}
           {/* 向路由组件传递search 参数 */}
-          <Link to={`/home/message/detail/?id=${item.id}&title=${item.title}`}>{item.title}</Link>
+          {/* <Link to={`/home/message/detail/?id=${item.id}&title=${item.title}`}>{item.title}</Link> */}
+          {/* 像路由组件传递state参数 */}
+          <Link to={{ pathname: '/home/message/detail', state: { id: item.id, title: item.title } }}>{item.title}</Link>
         </li>)}
       </ul>
       <Divider />
@@ -40,7 +42,9 @@ const Message = () => {
       {/* 声明接收params参数 */}
       {/* <Route path='/home/message/detail/:id/:title' component={Detail}/> */}
       {/* search 参数无需声明接收，正常注册路由即可 */}
-      <Route path='/home/message/detail' component={Detail}/>
+      {/* <Route path='/home/message/detail' component={Detail} /> */}
+       {/* state 参数无需声明接收，正常注册路由即可 */}
+      <Route path='/home/message/detail' component={Detail} />
     </div>
   )
 }
