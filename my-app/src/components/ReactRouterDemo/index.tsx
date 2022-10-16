@@ -17,10 +17,10 @@ function ReactRouterDemo(props: Props) {
         <ul className={styles.left}>
           {/* 编写路由链接 */}
           <li className='nav-link'>
-            <NavLink className='nav-link' to={`/about`}>About</NavLink>
+            <NavLink replace className='nav-link' to={`/about`}>About</NavLink>
           </li>
           <li className='nav-link'>
-            <NavLink className='nav-link' to={`/home`}>Home</NavLink>
+            <NavLink replace className='nav-link' to={`/home`}>Home</NavLink>
           </li>
         </ul>
         <div className={styles.right}>
