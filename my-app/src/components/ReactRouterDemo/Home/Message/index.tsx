@@ -55,7 +55,7 @@ const Message = (props) => {
   }
 
   const go = () => {
-    // 正数 1 前进   负数 -1 后退
+    // 正数 1 前进   负数 -1 后退  
     props.history.go(-1);
   }
 

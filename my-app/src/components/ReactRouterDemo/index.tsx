@@ -3,6 +3,7 @@ import { NavLink, Route, Switch, Redirect } from "react-router-dom";
 import styles from "./index.module.less";
 import Home from "./Home";
 import About from "./About";
+import Header from "../../components/Header";
 // import { Navbar } from "react-bootstrap";
 // import Test from './Test';
 
@@ -12,7 +13,8 @@ function ReactRouterDemo(props: Props) {
   console.log(`route -- props -- `, props);
   return (
     <div className={classNames(styles.wrap, 'nav nav-tabs')}>
-      <header>React 路由测试</header>
+      {/* <header>React 路由测试</header> */}
+      <Header />
       <section>
         <ul className={styles.left}>
           {/* 编写路由链接 */}

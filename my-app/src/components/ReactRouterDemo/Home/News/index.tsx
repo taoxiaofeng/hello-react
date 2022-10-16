@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './index.module.less';
 
-const News = () => {
+const News = (props) => {
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     props.history.push(`/home/message/detail`);
+  //   },2000);
+  // }, []);
+
   return (
     <ul className={styles.wrap}>
       <li>这是News组件001</li>
