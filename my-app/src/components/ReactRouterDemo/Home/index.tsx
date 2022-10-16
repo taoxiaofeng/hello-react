@@ -13,10 +13,10 @@ export default function Home() {
         <ul className="nav nav-tabs">
           <li className='nav-link' style={{ marginRight: 10 }}>
             {/* 路由是从自开始注册的理由逐层匹配 */}
-            <NavLink replace to="/home/news">News</NavLink>
+            <NavLink to="/home/news">News</NavLink>
           </li>
           <li className='nav-link'>
-            <NavLink replace to="/home/message">Message</NavLink>
+            <NavLink to="/home/message">Message</NavLink>
           </li>
         </ul>
         {/* 注册路由 */}
