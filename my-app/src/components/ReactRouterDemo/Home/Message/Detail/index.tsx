@@ -23,7 +23,7 @@ const data = [{
 }];
 
 const Detail = (props) => {
-  console.log(`detail -- `, props)
+  // console.log(`detail -- `, props)
 
   // 接收params参数
   // const { match: { params: { id, title } } } = props;
