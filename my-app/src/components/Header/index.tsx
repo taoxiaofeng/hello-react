@@ -17,7 +17,7 @@ const Header = (props) => {
   }
 
 
-  const forward = () => {
+  const forward = () => { 
     props.history.goForward();
   }
 
@@ -30,7 +30,7 @@ const Header = (props) => {
   return (
     <div className={styles.wrap}>
       <div>
-        <Button type="default" onClick={back} style={{ width: 100 }}>前进</Button>
+        <Button type="primary" onClick={back} style={{ width: 100 }}>前进</Button>
         <Button type="default" onClick={forward} style={{ width: 100 }}>后退</Button>
         <Button type="default" onClick={go} style={{ width: 100 }}>GO</Button>
       </div>
