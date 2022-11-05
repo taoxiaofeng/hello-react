@@ -2,7 +2,8 @@
 import './App.less';
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
-import ReactRouterDemo from './components/ReactRouterDemo';
+// import ReactRouterDemo from './components/ReactRouterDemo';
+import Count from './components/Count';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       </header> */}
       {/* <Todo /> */}
       {/* <GitHubUser /> */}
-      <ReactRouterDemo />
+      {/* <ReactRouterDemo /> */}
+      <Count />
     </div>
   );
 }
