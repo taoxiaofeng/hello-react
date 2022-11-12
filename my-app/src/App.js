@@ -4,6 +4,8 @@ import './App.less';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
 import Count from './components/Count';
+// 引入store
+import store from './redux/store';
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
       {/* <Todo /> */}
       {/* <GitHubUser /> */}
       {/* <ReactRouterDemo /> */}
-      <Count />
+      <Count store={store} />
     </div>
   );
 }
