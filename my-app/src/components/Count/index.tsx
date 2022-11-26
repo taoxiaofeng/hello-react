@@ -2,38 +2,51 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form, Input, Select } from 'antd';
 import { PlusOutlined, MinusOutlined, } from '@ant-design/icons';
 import styles from './index.module.less';
-
+// const myPrint = console.log;
 const { Option } = Select;
 const Count = (props) => {
 
   console.log(`Count -- `, props);
+  console.log(`Count -- `, props.store.getState());
 
   const [form] = Form.useForm();
+
+  // useEffect(() => {
+  //   console.count()
+  // }, [])
 
 
   // 加法
   const increment = () => {
     const { number } = form.getFieldsValue();
-
+    props.jia(number * 1);
   }
 
   // 减法
   const decrement = () => {
     const { number } = form.getFieldsValue();
-   
+    props.jian(number * 1);
   }
 
   // 奇数再加
   const incrementIfOdd = () => {
     const { number } = form.getFieldsValue();
-    
+    if (props.count % 2 !== 0) {
+      props.jia(number * 1);
+    }
   }
 
   // 异步加
   const incrementAsync = () => {
     const { number } = form.getFieldsValue();
-   
+    props.jiaAsync(number * 1, 1000);
   }
+
+  // myPrint('render...')
+  // console.log(`render -- `)
+  // setTimeout(() => {
+  //   console.log(1)
+  // }, 1)
 
   return (
     <div className={styles.container}>
