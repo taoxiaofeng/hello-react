@@ -17,7 +17,6 @@ export const createDecrementAction = data => ({
 //  异步action，就是指action的值为函数
 export const createIncrementAsyncAction = (data, time) => {
   return (dispatch) => {
-    console.log(`dispatch -- `, dispatch);
     setTimeout(() => {
       dispatch(createIncrementAction(data));
     }, time);
