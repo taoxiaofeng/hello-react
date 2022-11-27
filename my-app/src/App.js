@@ -3,10 +3,11 @@ import './App.less';
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
-// import Count from './components/Count';
 import Count from './containers/Count';
+import Person from './containers/Person';
 // 引入store
-import store from './redux/store';
+// import store from './redux/store';
+import { Divider } from 'antd';
 
 function App() {
   return (
@@ -28,7 +29,9 @@ function App() {
       {/* <Todo /> */}
       {/* <GitHubUser /> */}
       {/* <ReactRouterDemo /> */}
-      <Count store={store} />
+      <Count />
+      <Divider />
+      <Person  />
     </div>
   );
 }
