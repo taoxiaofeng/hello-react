@@ -1,0 +1,89 @@
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.form-row {
+  border: 1px solid #e2e2e2;
+  margin: 10px 0;
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline-form-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.inline-form-item .ant-form-item {
+  flex: none;
+  flex-wrap: nowrap;
+  margin-right: 16px;
+}
+
+.inline-form-item .ant-form-item-with-help {
+  margin-bottom: 0;
+}
+
+.mg20 {
+  margin: 20px 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.title>span {
+  font-size: 14px;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: right;
+}
+
+.title>span:nth-child(1) {
+  white-space: nowrap;
+  color: #82899e;
+}
+
+.title>span:nth-child(2) {
+  color: #38415c;
+}
+
+.lineTitle {
+  align-items: center;
+  color: #000;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.lineTitle::before {
+  background: #3385ff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 14px;
+  margin-right: 6px;
+  min-width: 4px;
+  width: 4px;
+}
