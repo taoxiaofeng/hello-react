@@ -8,8 +8,15 @@ import Person from './containers/Person';
 // 引入store
 // import store from './redux/store';
 import { Divider } from 'antd';
+import { XTerm } from 'xterm-for-react';
+import { useEffect, useRef } from 'react';
 
 function App() {
+  const xtermRef = useRef(null)
+  useEffect(() => {
+    xtermRef.current.terminal.writeln("Hello, World!")
+  }, []);
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -29,9 +36,10 @@ function App() {
       {/* <Todo /> */}
       {/* <GitHubUser /> */}
       {/* <ReactRouterDemo /> */}
-      <Count />
+      {/* <Count />
       <Divider />
-      <Person  />
+      <Person  /> */}
+      <XTerm ref={xtermRef} />
     </div>
   );
 }
