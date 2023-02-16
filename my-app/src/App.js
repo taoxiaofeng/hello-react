@@ -3,19 +3,31 @@ import './App.less';
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
-import Count from './containers/Count';
-import Person from './containers/Person';
+// import Count from './containers/Count';
+// import Person from './containers/Person';
 // 引入store
 // import store from './redux/store';
-import { Divider } from 'antd';
-import { XTerm } from 'xterm-for-react';
-import { useEffect, useRef } from 'react';
+// import { Divider } from 'antd';
+// import { XTerm } from 'xterm-for-react';
+// import { useEffect, useRef } from 'react';
+// import { Terminal } from "react-xterm";
+// import "xterm/css/xterm.css";
+// import { FitAddon } from "xterm-addon-fit";
+// import { AttachAddon } from "xterm-addon-attach";
+import WebConsole from './components/WebConsole'
 
 function App() {
-  const xtermRef = useRef(null)
-  useEffect(() => {
-    xtermRef.current.terminal.writeln("Hello, World!")
-  }, []);
+  // const termRef = useRef();
+  // useEffect(() => {
+  //   // xtermRef.current.terminal.writeln("Hello, World!")
+  //   const term = termRef.current.terminal;
+  //   const fitAddon = new FitAddon();
+  //   const attachAddon = new AttachAddon(new WebSocket("ws://localhost:8080"));
+  //   term.loadAddon(fitAddon);
+  //   term.loadAddon(attachAddon);
+  //   term.open(termRef.current);
+  //   fitAddon.fit();
+  // }, []);
 
   return (
     <div className="App">
@@ -39,7 +51,9 @@ function App() {
       {/* <Count />
       <Divider />
       <Person  /> */}
-      <XTerm ref={xtermRef} />
+      {/* <XTerm ref={xtermRef} /> */}
+      {/* <Terminal ref={termRef} /> */}
+      <WebConsole />
     </div>
   );
 }
