@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import React from 'react';
 import './App.less';
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
@@ -14,8 +15,9 @@ import './App.less';
 // import "xterm/css/xterm.css";
 // import { FitAddon } from "xterm-addon-fit";
 // import { AttachAddon } from "xterm-addon-attach";
-import WebConsole from './components/WebConsole'
-
+// import WebConsole from './components/WebConsole'
+// import UsePow from './components/UsePow'\
+import MockMemo from './components/MockMemo/index';
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -53,7 +55,9 @@ function App() {
       <Person  /> */}
       {/* <XTerm ref={xtermRef} /> */}
       {/* <Terminal ref={termRef} /> */}
-      <WebConsole />
+      {/* <WebConsole /> */}
+      {/* <UsePow /> */}
+    <MockMemo />    
     </div>
   );
 }
