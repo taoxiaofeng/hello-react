@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // 引入action
 import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from '../../redux/actions/count';
 // 引入connect用于连接UI组件与redux
@@ -51,11 +51,12 @@ const Count = (props) => {
 
   return (
     <div className={styles.container}>
+      <h2>我是count组件</h2>
       <Form form={form} labelCol={{ span: 2 }} wrapperCol={{ span: 22 }}>
         {/* <Form.Item label='当期求和为' name="count">
           <Input readOnly />
         </Form.Item> */}
-        <h1 className={styles.title}>当前求和为：{props.count}</h1>
+        <h1 className={styles.title}>当前求和为：{props.count}, person组件添加的总人数为: {props.renshu}</h1>
         <Form.Item label="number">
           <Form.Item noStyle name="number" initialValue={1}>
             <Select style={{ width: 120 }}>
@@ -90,7 +91,10 @@ const Count = (props) => {
  * (2):用于操作状态的方法
  */
 export default connect(
-  state => ({ count: state }),  // 映射状态
+  (state:any) => {
+    console.log(state.he)
+    return  ({ count: state.he, renshu: state.rens.length })
+  },  // 映射状态
   // (dispatch:any) => ({
   //   jia: value => dispatch(createIncrementAction(value)),
   //   jian: value => dispatch(createDecrementAction(value)),

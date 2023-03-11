@@ -4,11 +4,11 @@ import './App.less';
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
-// import Count from './containers/Count';
-// import Person from './containers/Person';
+import Count from './containers/Count';
+import Person from './containers/Person';
 // 引入store
 // import store from './redux/store';
-// import { Divider } from 'antd';
+import { Divider } from 'antd';
 // import { XTerm } from 'xterm-for-react';
 // import { useEffect, useRef } from 'react';
 // import { Terminal } from "react-xterm";
@@ -17,7 +17,7 @@ import './App.less';
 // import { AttachAddon } from "xterm-addon-attach";
 // import WebConsole from './components/WebConsole'
 // import UsePow from './components/UsePow'\
-import MockMemo from './components/MockMemo/index';
+// import MockMemo from './components/MockMemo/index';
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -50,14 +50,14 @@ function App() {
       {/* <Todo /> */}
       {/* <GitHubUser /> */}
       {/* <ReactRouterDemo /> */}
-      {/* <Count />
+      <Count />
       <Divider />
-      <Person  /> */}
+      <Person  />
       {/* <XTerm ref={xtermRef} /> */}
       {/* <Terminal ref={termRef} /> */}
       {/* <WebConsole /> */}
       {/* <UsePow /> */}
-    <MockMemo />    
+      {/* <MockMemo />     */}
     </div>
   );
 }
