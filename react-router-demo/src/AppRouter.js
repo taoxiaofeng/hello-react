@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Index from './Pages/Index';
 import './index.css';
-import Video from './Pages/Video';
-import Workplace from './Pages/Workplace'
+import Loading from './pages/loading'
+// import Index from './Pages/Index';
+// import Video from './Pages/Video';
+// import Workplace from './Pages/Workplace'
+
+// 路由懒加载
+const Index = lazy(() => import('./pages/home'));
+const Video = lazy(() => import('./pages/video'));
+const Workplace = lazy(() => import('./pages/Workplace'));
 
 function AppRouter() {
   //mock 路由数据
@@ -30,7 +36,7 @@ function AppRouter() {
       <div className="mainDiv">
         <div className="leftNav">
           <h3>一级导航</h3>
-          <ul>
+          <ul>  
             {/* <li>
               <Link to="/">博客首页</Link>
             </li>
@@ -55,7 +61,11 @@ function AppRouter() {
           <Route path="/workplace" component={Workplace} /> */}
           {
             routeConfig.map((item, index) => {
-              return (<Route key={index} path={item.path} exact={item.exact} component={item.component} />)
+              return (
+                <Suspense fallback={<Loading />} key={index} >
+                  <Route path={item.path} exact={item.exact} component={item.component} />
+                </Suspense>
+              )
             })
           }
         </div>
