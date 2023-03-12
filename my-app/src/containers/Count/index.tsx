@@ -1,7 +1,7 @@
 
 import React from 'react';
 // 引入action
-import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from '../../redux/actions/count';
+import { increment, decrement, incrementAsync } from '../../redux/actions/count';
 // 引入connect用于连接UI组件与redux
 import { connect } from 'react-redux';
 import { Button, Form , Select } from 'antd';
@@ -20,27 +20,27 @@ const Count = (props) => {
   // 加法
   const increment = () => {
     const { number } = form.getFieldsValue();
-    props.jia(number * 1);
+    props.increment(number * 1);
   }
 
   // 减法
   const decrement = () => {
     const { number } = form.getFieldsValue();
-    props.jian(number * 1);
+    props.decrement(number * 1);
   }
 
   // 奇数再加
   const incrementIfOdd = () => {
     const { number } = form.getFieldsValue();
     if (props.count % 2 !== 0) {
-      props.jia(number * 1);
+      props.increment(number * 1);
     }
   }
 
   // 异步加
   const incrementAsync = () => {
     const { number } = form.getFieldsValue();
-    props.jiaAsync(number * 1, 1000);
+    props.incrementAsync(number * 1, 1000);
   }
 
   // myPrint('render...')
@@ -56,7 +56,7 @@ const Count = (props) => {
         {/* <Form.Item label='当期求和为' name="count">
           <Input readOnly />
         </Form.Item> */}
-        <h1 className={styles.title}>当前求和为：{props.count}, person组件添加的总人数为: {props.renshu}</h1>
+        <h1 className={styles.title}>当前求和为：{props.count}, person组件添加的总人数为: {props.personCount}</h1>
         <Form.Item label="number">
           <Form.Item noStyle name="number" initialValue={1}>
             <Select style={{ width: 120 }}>
@@ -92,20 +92,20 @@ const Count = (props) => {
  */
 export default connect(
   (state:any) => {
-    console.log(state.he)
-    return  ({ count: state.he, renshu: state.rens.length })
+    console.log(state.count)
+    return  ({ count: state.count, personCount: state.persons.length })
   },  // 映射状态
   // (dispatch:any) => ({
-  //   jia: value => dispatch(createIncrementAction(value)),
-  //   jian: value => dispatch(createDecrementAction(value)),
-  //   jiaAsync: (value, time) => dispatch(createIncrementAsyncAction(value, time)),
+  //   jia: value => dispatch(increment(value)),
+  //   jian: value => dispatch(decrement(value)),
+  //   jiaAsync: (value, time) => dispatch(incrementAsync(value, time)),
   // })
 
   // mapDispatchToProps的简写
   // 操作状态
   {
-    jia: createIncrementAction,
-    jian: createDecrementAction,
-    jiaAsync: createIncrementAsyncAction
+    increment,
+    decrement,
+    incrementAsync
   }
 )(Count);  // UI组件和容器组件建立联系  

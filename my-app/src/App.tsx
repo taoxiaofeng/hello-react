@@ -4,8 +4,8 @@ import './App.less';
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
-import Count from './containers/Count';
-import Person from './containers/Person';
+import Count from './containers/Count';  // 引入的是Count的容器组件
+import Person from './containers/Person'; // 引入的是Person的容器组件
 // 引入store
 // import store from './redux/store';
 import { Divider } from 'antd';

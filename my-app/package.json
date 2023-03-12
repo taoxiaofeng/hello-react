@@ -65,6 +65,7 @@
     "react-scripts": "^5.0.1",
     "react-xterm": "^2.0.4",
     "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
