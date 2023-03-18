@@ -18,6 +18,7 @@ import { Divider } from 'antd';
 // import WebConsole from './components/WebConsole'
 // import UsePow from './components/UsePow'\
 // import MockMemo from './components/MockMemo/index';
+import Parent from './containers/Parent'
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -50,9 +51,10 @@ function App() {
       {/* <Todo /> */}
       {/* <GitHubUser /> */}
       {/* <ReactRouterDemo /> */}
-      <Count />
+      {/* <Count />
       <Divider />
-      <Person  />
+      <Person  /> */}
+      <Parent />
       {/* <XTerm ref={xtermRef} /> */}
       {/* <Terminal ref={termRef} /> */}
       {/* <WebConsole /> */}
