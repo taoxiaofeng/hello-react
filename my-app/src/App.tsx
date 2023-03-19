@@ -20,7 +20,7 @@ import { Divider } from "antd";
 // import MockMemo from './components/MockMemo/index';
 // import Parent from "./components/Parent";
 // import RenderProps from "./components/RenderProps/Index";
-import ErrorBoundaries from "./components/ErrorBoundaries/index";
+// import ErrorBoundaries from "./components/ErrorBoundaries/index";
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -63,7 +63,7 @@ function App() {
       {/* <UsePow /> */}
       {/* <MockMemo />     */}
       {/* <RenderProps /> */}
-      <ErrorBoundaries />
+      {/* <ErrorBoundaries /> */}
     </div>
   );
 }
