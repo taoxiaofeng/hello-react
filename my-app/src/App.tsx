@@ -1,14 +1,14 @@
 // import logo from './logo.svg';
-import React from 'react';
-import './App.less';
+import React from "react";
+import "./App.less";
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
-import Count from './containers/Count';  // 引入的是Count的容器组件
-import Person from './containers/Person'; // 引入的是Person的容器组件
+import Count from "./containers/Count"; // 引入的是Count的容器组件
+import Person from "./containers/Person"; // 引入的是Person的容器组件
 // 引入store
 // import store from './redux/store';
-import { Divider } from 'antd';
+import { Divider } from "antd";
 // import { XTerm } from 'xterm-for-react';
 // import { useEffect, useRef } from 'react';
 // import { Terminal } from "react-xterm";
@@ -18,7 +18,8 @@ import { Divider } from 'antd';
 // import WebConsole from './components/WebConsole'
 // import UsePow from './components/UsePow'\
 // import MockMemo from './components/MockMemo/index';
-import Parent from './containers/Parent'
+import Parent from "./components/Parent";
+import RenderProps from "./components/RenderProps/Index";
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -54,12 +55,13 @@ function App() {
       {/* <Count />
       <Divider />
       <Person  /> */}
-      <Parent />
+      {/* <Parent /> */}
       {/* <XTerm ref={xtermRef} /> */}
       {/* <Terminal ref={termRef} /> */}
       {/* <WebConsole /> */}
       {/* <UsePow /> */}
       {/* <MockMemo />     */}
+      <RenderProps />
     </div>
   );
 }
