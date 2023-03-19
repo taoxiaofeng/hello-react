@@ -18,8 +18,9 @@ import { Divider } from "antd";
 // import WebConsole from './components/WebConsole'
 // import UsePow from './components/UsePow'\
 // import MockMemo from './components/MockMemo/index';
-import Parent from "./components/Parent";
-import RenderProps from "./components/RenderProps/Index";
+// import Parent from "./components/Parent";
+// import RenderProps from "./components/RenderProps/Index";
+import ErrorBoundaries from "./components/ErrorBoundaries/index";
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -61,7 +62,8 @@ function App() {
       {/* <WebConsole /> */}
       {/* <UsePow /> */}
       {/* <MockMemo />     */}
-      <RenderProps />
+      {/* <RenderProps /> */}
+      <ErrorBoundaries />
     </div>
   );
 }
