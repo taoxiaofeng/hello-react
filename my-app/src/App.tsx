@@ -21,6 +21,8 @@ import { Divider } from "antd";
 // import Parent from "./components/Parent";
 // import RenderProps from "./components/RenderProps/Index";
 // import ErrorBoundaries from "./components/ErrorBoundaries/index";
+import Comment from "./components/Comment/index";
+import data  from "./components/Comment/mock";
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -35,7 +37,7 @@ function App() {
   // }, []);
 
   return (
-    <div className="App">
+    <div className="w-screen h-screen">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -64,6 +66,10 @@ function App() {
       {/* <MockMemo />     */}
       {/* <RenderProps /> */}
       {/* <ErrorBoundaries /> */}
+      <h2>纯水精灵怎么打？</h2>
+      <hr />
+      {data.filter(item => !item.parentId).map(item => <Comment key={item.id} {...item} />)}
+      
     </div>
   );
 }
