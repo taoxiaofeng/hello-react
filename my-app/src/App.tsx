@@ -1,14 +1,14 @@
 // import logo from './logo.svg';
-import React from 'react';
-import './App.less';
+import React from "react";
+import "./App.less";
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
-// import Count from './containers/Count';
-// import Person from './containers/Person';
+import Count from "./containers/Count"; // 引入的是Count的容器组件
+import Person from "./containers/Person"; // 引入的是Person的容器组件
 // 引入store
 // import store from './redux/store';
-// import { Divider } from 'antd';
+import { Divider } from "antd";
 // import { XTerm } from 'xterm-for-react';
 // import { useEffect, useRef } from 'react';
 // import { Terminal } from "react-xterm";
@@ -17,7 +17,12 @@ import './App.less';
 // import { AttachAddon } from "xterm-addon-attach";
 // import WebConsole from './components/WebConsole'
 // import UsePow from './components/UsePow'\
-import MockMemo from './components/MockMemo/index';
+// import MockMemo from './components/MockMemo/index';
+// import Parent from "./components/Parent";
+// import RenderProps from "./components/RenderProps/Index";
+// import ErrorBoundaries from "./components/ErrorBoundaries/index";
+import Comment from "./components/Comment/index";
+import data  from "./components/Comment/mock";
 function App() {
   // const termRef = useRef();
   // useEffect(() => {
@@ -32,7 +37,7 @@ function App() {
   // }, []);
 
   return (
-    <div className="App">
+    <div className="w-screen h-screen">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -53,11 +58,18 @@ function App() {
       {/* <Count />
       <Divider />
       <Person  /> */}
+      {/* <Parent /> */}
       {/* <XTerm ref={xtermRef} /> */}
       {/* <Terminal ref={termRef} /> */}
       {/* <WebConsole /> */}
       {/* <UsePow /> */}
-    <MockMemo />    
+      {/* <MockMemo />     */}
+      {/* <RenderProps /> */}
+      {/* <ErrorBoundaries /> */}
+      <h2>纯水精灵怎么打？</h2>
+      <hr />
+      {data.filter(item => !item.parentId).map(item => <Comment key={item.id} {...item} />)}
+      
     </div>
   );
 }

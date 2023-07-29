@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import ReactPage from './video/ReactPage';
-import Flutter from './video/Flutter';
-import Vue from './video/Vue';
-import './index.css';
+import ReactPage from './ReactPage'
+import Flutter from './Flutter'
+import Vue from './Vue'
+import '../index.css';
 
 function Video() {
   return (

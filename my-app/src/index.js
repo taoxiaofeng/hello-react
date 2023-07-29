@@ -14,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      {/* 此处需要使用Provider包裹App, 目的是让App所有的后代容器组件都能接收到store */}
       <Provider store={store}>
         <App />
       </Provider>
