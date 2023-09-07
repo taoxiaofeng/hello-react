@@ -8,6 +8,8 @@ import styles from './index.module.less';
  * withRouter => 返回值是一个新组件
  */
 
+const myVar = `测试全局变量`;
+  console.log(`myVar`, myVar);
 const Header = (props) => {
 
   console.log(`Header -- `, props)
