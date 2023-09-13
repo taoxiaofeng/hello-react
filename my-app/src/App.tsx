@@ -28,7 +28,8 @@ import "./App.less";
 // import Demo from "./components/Demo/index";
 // import Component from './components/Component/index';
 // import ParentComponent from './components/ParentComponent/index';
-import UseTransition from "./components/UseTransition/index";
+// import UseTransition from "./components/UseTransition/index";
+import Currying from "./components/Currying/index";
 
 
 // 创建一个Context
@@ -54,7 +55,7 @@ function App() {
   //   term.open(termRef.current);
   //   fitAddon.fit();
   // }, []);
-  console.log(`UseTransition -- `, UseTransition);
+  // console.log(`UseTransition -- `, UseTransition);
 
   return (
     <div className="w-screen h-screen">
@@ -97,7 +98,8 @@ function App() {
       {/* <Demo /> */}
       {/* <Component /> */}
       {/* <ParentComponent /> */}
-      <UseTransition />
+      {/* <UseTransition /> */}
+      <Currying />
     </div>
   );
 }
