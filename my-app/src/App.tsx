@@ -29,7 +29,7 @@ import "./App.less";
 // import Component from './components/Component/index';
 // import ParentComponent from './components/ParentComponent/index';
 // import UseTransition from "./components/UseTransition/index";
-import Currying from "./components/Currying/index";
+import Currying2 from "./components/Currying2/index";
 
 
 // 创建一个Context
@@ -99,7 +99,8 @@ function App() {
       {/* <Component /> */}
       {/* <ParentComponent /> */}
       {/* <UseTransition /> */}
-      <Currying />
+      {/* <Currying /> */}
+      <Currying2 />
     </div>
   );
 }
