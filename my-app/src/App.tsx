@@ -1,6 +1,9 @@
 // import logo from './logo.svg';
 import React, { useContext, useId } from "react";
 import "./App.less";
+import TabCmp from "./components/TabCmp/index";
+import Editor from "./components/Editor/index";
+import MarkdownDemo from "./components/MarkdownDemo/index";
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
@@ -29,8 +32,7 @@ import "./App.less";
 // import Component from './components/Component/index';
 // import ParentComponent from './components/ParentComponent/index';
 // import UseTransition from "./components/UseTransition/index";
-import Currying2 from "./components/Currying2/index";
-
+// import UseLayoutEffect from "./components/UseLayoutEffect/index";
 
 // 创建一个Context
 // const ThemeContext = React.createContext("light");
@@ -100,7 +102,12 @@ function App() {
       {/* <ParentComponent /> */}
       {/* <UseTransition /> */}
       {/* <Currying /> */}
-      <Currying2 />
+      {/* <Currying2 /> */}
+      {/* <UseLayoutEffect /> */}
+      {/* <Children /> */}
+      {/* <TabCmp /> */}
+      {/* <Editor /> */}
+      <MarkdownDemo />
     </div>
   );
 }
