@@ -14,31 +14,33 @@ const markdown = '```typescript\nfunction bubbleSort(arr: number[]): number[] {\
 
 const MarkdownDemo = () => {
   return (
-    <Markdown
-      children={markdown}
-      components={{
-        code(props) {
-          const { children, className, node, ...rest } = props
-          console.log(`className -- `, className)
-          const match = /language-(\w+)/.exec(className || '')
-          return match ? (
-            <SyntaxHighlighter
-              {...rest}
-              PreTag="div"
-              children={String(children).replace(/\n$/, '')}
-              language={match[1]}
-              style={
-                okaidia
-              }
-            />
-          ) : (
-            <code {...rest} className={className}>
-              {children}
-            </code>
-          )
-        }
-      }}
-    />
+    <>
+      <Markdown
+        children={markdown}
+        components={{
+          code(props) {
+            const { children, className, node, ...rest } = props
+            console.log(`className -- `, className)
+            const match = /language-(\w+)/.exec(className || '')
+            return match ? (
+              <SyntaxHighlighter
+                {...rest}
+                PreTag="div"
+                children={String(children).replace(/\n$/, '')}
+                language={match[1]}
+                style={
+                  okaidia
+                }
+              />
+            ) : (
+              <code {...rest} className={className}>
+                {children}
+              </code>
+            )
+          }
+        }}
+      />
+    </>
   )
 }
 
