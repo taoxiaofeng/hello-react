@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Divider } from 'antd';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import styles from './index.module.less';
 import Detail from './Detail';
 
@@ -68,7 +68,7 @@ const Message = (props) => {
           {/* 向路由组件传递search 参数 */}
           {/* <Link to={`/home/message/detail/?id=${item.id}&title=${item.title}`}>{item.title}</Link> */}
           {/* 像路由组件传递state参数 */}
-          <Link to={{ pathname: '/home/message/detail', state: { id: item.id, title: item.title } }}>{item.title}</Link>
+          <Link to={{ pathname: '/home/message/detail', search: `id=${item.id}&title=${item.title}` }}>{item.title}</Link>
           <Button type="default" onClick={() => pushShow(item)}>PUSH  查看</Button>
           <Button type="default" onClick={() => replaceShow(item)}>REPLACE  查看</Button>
         </li>)}
@@ -78,7 +78,9 @@ const Message = (props) => {
       {/* 声明接收params参数 */}
       {/* <Route path='/home/message/detail/:id/:title' component={Detail} /> */}
       {/* search 参数无需声明接收，正常注册路由即可 */}
-      <Route path='/home/message/detail' component={Detail} />
+      <Routes>
+        <Route path='/home/message/detail' element={<Detail />} />
+      </Routes>
       {/* state 参数无需声明接收，正常注册路由即可 */}
       {/* <Route path='/home/message/detail' component={Detail} /> */}
       <div style={{ display: 'flex' }}>

@@ -1,31 +1,27 @@
 import { Button } from 'antd';
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import styles from './index.module.less';
+import { useNavigate } from 'react-router-dom';
 
-/**
- * withRouter => 为一般组件加上路由组件特有的属性
- * withRouter => 返回值是一个新组件
- */
-
-const myVar = `测试全局变量`;
-  console.log(`myVar`, myVar);
 const Header = (props) => {
 
+  const navigate = useNavigate();
   console.log(`Header -- `, props)
 
   const back = () => {
-    props.history.goBack();
+    // props.history.goBack();
+    navigate(-1);
   }
 
-
   const forward = () => { 
-    props.history.goForward();
+    // props.history.goForward();
+    navigate(1);
   }
 
   const go = () => {
     // 正数 1 前进   负数 -1 后退  
-    props.history.go(-1);
+    // props.history.go(-1);
+    navigate(2);
   }
 
 
@@ -42,4 +38,6 @@ const Header = (props) => {
   )
 }
 
-export default withRouter(Header);
+export default Header;
+
+// export default withRouter(Header);

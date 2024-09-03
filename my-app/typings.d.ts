@@ -4,3 +4,8 @@ declare module "*.less"
 declare module "*.sass" 
 declare module "*.module.less"
 declare module "*.module.sass" 
+
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}

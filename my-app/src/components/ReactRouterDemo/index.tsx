@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route, Switch, Redirect } from "react-router-dom";
+import { NavLink, Route, Routes, Navigate } from "react-router-dom";
 import styles from "./index.module.less";
 import Home from "./Home";
 import About from "./About";
@@ -27,12 +27,11 @@ function ReactRouterDemo(props: Props) {
         </ul>
         <div className={styles.right}>
           {/* 注册路由  */}
-          <Switch>
-            <Route exact={true} path="/about" component={About} />
-            {/* exact = true --> 如果开启严格匹配， 就会导致home下面的子路由都无法访问。 */}
-            <Route exact={false} path="/home" component={Home} />
-            <Redirect to='/about' />
-          </Switch>
+          <Routes>
+            <Route path="/about" element={<About/>} />
+            <Route path="/home" element={<Home/>} />
+            <Route path="/" element={<Navigate to="/" />} />
+          </Routes>
         </div>
       </section>
       <footer></footer>

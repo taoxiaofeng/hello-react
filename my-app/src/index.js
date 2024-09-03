@@ -5,20 +5,22 @@ import './index.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 // 引入 store
 import store from './redux/store';
 import { Provider } from 'react-redux';
+import router from './router';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <RouterProvider router={router} >
       {/* 此处需要使用Provider包裹App, 目的是让App所有的后代容器组件都能接收到store */}
       <Provider store={store}>
         <App />
       </Provider>
-    </BrowserRouter>
+    </RouterProvider>
   </React.StrictMode>
 );
 

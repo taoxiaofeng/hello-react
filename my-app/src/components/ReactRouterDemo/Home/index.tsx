@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Switch, Route, Redirect } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 // import { Navbar } from 'react-bootstrap';
 import News from './News';
 import Message from './Message';
@@ -20,11 +20,10 @@ export default function Home() {
           </li>
         </ul>
         {/* 注册路由 */}
-        <Switch>
-          <Route exact={true} path="/home/news" component={News} />
-          <Route exact={false} path="/home/message" component={Message} />
-          <Redirect to='/home/news' />
-        </Switch>
+        <Routes>
+          <Route path="/home/news" element={<News />} />
+          <Route path="/home/message" element={<Message />} />
+        </Routes>
       </div>
     </div>
   )

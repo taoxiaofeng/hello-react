@@ -20,7 +20,7 @@
         "downlevelIteration": true,
         "baseUrl": "./",
         "paths": {
-          "@":[
+          "@/*":[
             "src/*"
           ]
         }

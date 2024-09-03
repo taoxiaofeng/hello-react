@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 import React, { useContext, useId } from "react";
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import "./App.less";
-import TabCmp from "./components/TabCmp/index";
-import Editor from "./components/Editor/index";
-import MarkdownDemo from "./components/MarkdownDemo/index";
+// import TabCmp from "./components/TabCmp/index";
+// import Editor from "./components/Editor/index";
+// import MarkdownDemo from "./components/MarkdownDemo/index";
 // import Todo from './components/Todo';
 // import GitHubUser from './components/GitHubUser';
 // import ReactRouterDemo from './components/ReactRouterDemo';
@@ -33,6 +34,10 @@ import MarkdownDemo from "./components/MarkdownDemo/index";
 // import ParentComponent from './components/ParentComponent/index';
 // import UseTransition from "./components/UseTransition/index";
 // import UseLayoutEffect from "./components/UseLayoutEffect/index";
+import BasicComponent from "./components/BasicComponent/index";
+import withTimestamp from "./components/BasicComponent/withTimestamp";
+
+// const EnhancedComponent = withTimestamp(BasicComponent);
 
 // 创建一个Context
 // const ThemeContext = React.createContext("light");
@@ -107,7 +112,34 @@ function App() {
       {/* <Children /> */}
       {/* <TabCmp /> */}
       {/* <Editor /> */}
-      <MarkdownDemo />
+      {/* <MarkdownDemo /> */}
+      {/* <EnhancedComponent /> */}
+      <nav>
+        <ul>
+          <li>
+            {/* <Link to="/">Home</Link> */}
+            <NavLink to="/" >Home</NavLink>
+          </li>
+          <li>
+            {/* <Link to="/about">About</Link> */}
+            <NavLink to="/about" >About</NavLink>
+          </li>
+          <li>
+            {/* <Link to="/home">Home</Link> */}
+            <NavLink to="/home" >Home</NavLink>
+          </li>
+          <li>
+            {/* <Link to="/pageA">PageA</Link> */}
+            <NavLink to="/pageA" >PageA</NavLink>
+          </li>
+          <li>
+            <NavLink to="/pageB" >PageB</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 }

@@ -2,6 +2,8 @@ import App from "./App";
 import React from "react";
 import About from "./components/ReactRouterDemo/About";
 import Home from "./components/ReactRouterDemo/Home";
+import PageA from "./views/pageA";
+import PageB from "./views/pageB";
 
 import {
   createBrowserRouter,
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <Home />,
+  },
+  {
+    path: "pageA",
+    element: <PageA />,
+  },
+  {
+    path: "pageB",
+    element: <PageB />,
   },
 ]);
 
