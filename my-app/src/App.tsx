@@ -34,8 +34,60 @@ import "./App.less";
 // import ParentComponent from './components/ParentComponent/index';
 // import UseTransition from "./components/UseTransition/index";
 // import UseLayoutEffect from "./components/UseLayoutEffect/index";
-import BasicComponent from "./components/BasicComponent/index";
-import withTimestamp from "./components/BasicComponent/withTimestamp";
+// import BasicComponent from "./components/BasicComponent/index";
+// import withTimestamp from "./components/BasicComponent/withTimestamp";
+// import ClassCmp from "./components/ClassCmp";
+// import { IDirectVoucher } from "./components/CardList";
+// const BasicComponent = React.lazy(() => import("./components/BasicComponent/index"));
+// const CardList = React.lazy(() => import("./components/CardList/index"));
+
+// const cardDataList: IDirectVoucher[] = [
+//   {
+//     brandName: '弄堂里',
+//     brandLogo:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*anNdQqA_I_AAAAAAAAAAAAAAARQnAQ',
+//     distanceDesc: '500m',
+//     campImage:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*U29sSqgeU-4AAAAAAAAAAAAAARQnAQ',
+//     promoLogo: [
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*y6CTRo9L2oEAAAAAAAAAAAAAARQnAQ',
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*Q1d4SIoeKRkAAAAAAAAAAAAAARQnAQ',
+//     ],
+//     voucherDesc: '弄堂里14元超值优惠券包x2',
+//     benefitAmount: '1',
+//     oriPriceAmount: '28',
+//     discountDesc: '0.6折',
+//     voucherStockNum: '库存888份',
+//   },
+//   {
+//     brandName: '弄堂里',
+//     brandLogo:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*anNdQqA_I_AAAAAAAAAAAAAAARQnAQ',
+//     distanceDesc: '500m',
+//     campImage:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*U29sSqgeU-4AAAAAAAAAAAAAARQnAQ',
+//     promoLogo: [
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*Q1d4SIoeKRkAAAAAAAAAAAAAARQnAQ',
+//     ],
+//     voucherDesc: '弄堂里14元超值优惠券包x2',
+//     benefitAmount: '1',
+//     discountDesc: '0.6折',
+//   },
+//   {
+//     brandName: '飞猪',
+//     brandLogo:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*dCL5Q4oBaQsAAAAAAAAAAAAAARQnAQ',
+//     campImage:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*MZ7VSaNZXRYAAAAAAAAAAAAAARQnAQ',
+//     promoLogo:
+//       'https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*90WEQLmnKdkAAAAAAAAAAAAAARQnAQ',
+//     voucherDesc: '南方航空20元优惠券',
+//     benefitAmount: '20',
+//   },
+// ];
+
+import Demo from "./components/Demo";
+import RotateCards from "./components/RotateCards";
 
 // const EnhancedComponent = withTimestamp(BasicComponent);
 
@@ -65,7 +117,9 @@ function App() {
   // console.log(`UseTransition -- `, UseTransition);
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen flex flex-col">
+      <Demo />
+      {/* <BasicComponent /> */}
       {/* <ThemeContext.Provider value="自定义">
         <ThemeConsumer />
       </ThemeContext.Provider> */}
@@ -102,7 +156,7 @@ function App() {
       {/* <h2>纯水精灵怎么打？</h2>
       <hr />
       {data.filter(item => !item.parentId).map(item => <Comment key={item.id} {...item} />)} */}
-      {/* <Demo /> */}
+      {/* <CardList list={cardDataList} /> */}
       {/* <Component /> */}
       {/* <ParentComponent /> */}
       {/* <UseTransition /> */}
@@ -114,6 +168,7 @@ function App() {
       {/* <Editor /> */}
       {/* <MarkdownDemo /> */}
       {/* <EnhancedComponent /> */}
+      <RotateCards />
       <nav>
         <ul>
           <li>
@@ -137,6 +192,7 @@ function App() {
           </li>
         </ul>
       </nav>
+      {/* <ClassCmp /> */}
       <div>
         <Outlet />
       </div>

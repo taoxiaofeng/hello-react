@@ -1,0 +1,166 @@
+html {
+  font-size: 60px;
+}
+
+body {
+  background: #E3E3E3;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 11.6667rem;
+  height: 3.3333rem;
+  /* 高度自动适应内容 */
+  background-image: url(https://gw.alipayobjects.com/mdn/rms_7527d7/afts/img/A*HD9_S4RyppUAAAAAAAAAAAAAARQnAQ);
+  background-size: 100% auto;
+  background-position: center;
+  margin-bottom: 0.4rem;
+  padding: 0.3rem;
+  /* 添加内边距以便内容不贴边 */
+  border-radius: 8px;
+  /* 添加圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* 添加阴影效果 */
+  position: relative;
+
+  .left-box {
+    width: 8.1667rem;
+    padding-right: .1rem;
+  }
+
+  .card-header {
+    width: 100%;
+  }
+
+  .card-header,
+  .card-header .brand-logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-name,
+  .voucher-desc {
+    font-size: 0.24rem;
+    color: black;
+  }
+
+  .distance {
+    color: #999
+  }
+
+  .voucher-desc {
+    font-weight: bold;
+  }
+
+  .brand-logo-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-header .brand-logo {
+    width: .5333rem;
+    height: .5333rem;
+  }
+
+  .card-body {
+    display: flex;
+    margin-top: .1rem;
+  }
+
+  .body-center .promo-logo-box {
+    display: flex;
+  }
+
+  .card-body .body-center {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .body-center .pricing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campaign-image {
+    width: 122px;
+    height: 122px;
+  }
+
+  .voucher-desc {
+    color: #333;
+    margin-bottom: 0.2rem;
+    /* 描述与价格的间距 */
+  }
+
+  .pricing {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+    /* 添加底部间距 */
+  }
+
+  .benefit-amount {
+    color: #f5222d;
+    font-size: 0.36rem;
+    font-weight: bold;
+    margin-right: 0.2rem;
+  }
+
+  .original-price {
+    font-size: 0.24rem;
+    text-decoration: line-through;
+    color: #999;
+  }
+
+  .discount-desc {
+    font-size: 0.24rem;
+    color: #f5222d;
+    margin-left: auto;
+    /* 将折扣描述靠右对齐 */
+  }
+
+  .promo-logo {
+    width: 1rem;
+    margin-bottom: 0.2rem;
+    margin-right: .1rem;
+  }
+
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.24rem;
+    color: #666;
+    margin-top: 0.2rem;
+  }
+
+  .right-box .btn {
+    width: 2rem;
+    height: 1rem;
+    color: #fff;
+    font-size: .3333rem;
+    font-weight: bold;
+    border-radius: .6rem;
+    background-color: red;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem;
+  }
+
+  .stock {
+    color: #999;
+    margin-top: auto;
+  }
+
+  .discount-desc {
+    position: absolute;
+    top: 0;
+  }
+}

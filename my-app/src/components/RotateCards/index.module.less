@@ -1,0 +1,54 @@
+.card {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  align-self: center;
+  perspective: 1000px;
+  position: relative;
+  // &:hover {
+  //   .face {
+  //     transform: rotateY(-180deg);
+  //   }
+  //   .back {
+  //     transform: rotateY(0deg);
+  //   }
+  // }
+
+  &.active {
+    .face {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .face {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+  }
+
+
+  .back {
+    width: 400px;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    transform: rotateY(-180deg);
+  }
+
+  .face, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 600ms;
+    // transition: z-index 600ms;
+    transform-style: preserve-3d;
+  }
+}
